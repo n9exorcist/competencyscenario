@@ -1,0 +1,9 @@
+.no-results-found-container {
+    padding: 140px 0;
+    text-align: center;
+    color: #00A1B7;
+}
+
+.no-results-found-container span {
+    display: block;
+}

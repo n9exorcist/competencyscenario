@@ -1,0 +1,403 @@
+[
+  {
+    "id": 1,
+    "name": "Crush It! Why Now is the Time to Cash in on Your Passion",
+    "description": "In his 2009 international bestseller Crush It, Gary insisted that a vibrant personal brand was crucial to entrepreneurial success, In Crushing It, Gary explains why that’s even more true today, offering his unique perspective on what has changed and what principles remain timeless. He also shares stories from other entrepreneurs who have grown wealthier and not just financially than they ever imagined possible by following Crush It principles. The secret to their success (and Gary’s) has everything to do with their understanding of the social media platforms and their willingness to do whatever it took to make these tools work to their utmost potential. That’s what Crushing It teaches readers to do.",
+    "price": 399,
+    "photo": "/assets/u0.png",
+    "categories": ["Digital Marketing", "E-Commerce"],
+    "author": "Gary Vaynerchuk",
+    "difficultyLevel": "Intermediate",
+    "publishedOn": "2016-07-23 00:00:00",
+    "orderQuantityLimit": "The order quantity for this product is limited to 3 units per customer",
+    "reviews": [
+      {
+        "username": "Maria John",
+        "date": "2017-04-01 19:13:23",
+        "comment": "So I've been following Gary V, mostly on YouTube for a couple of months now, and bought this book as a way to understand the best way to approach social media and entrepreneurship as I embark on a journey towards becoming a professional writer."
+      },
+      {
+        "username": "Maria John",
+        "date": "2018-03-12 11:23:23",
+        "comment": "Nothing good about book."
+      },
+      {
+        "username": "Baseer",
+        "date": "2017-08-23 09:02:47",
+        "comment": "I have no doubt saying that gary is a great stroy teller, and this book is an evidence to his claim, its my first gary vee book and I throughly enjoued it, its been distributed in 2 parts, first talks about how some of the people who used crush it method are crushing it, and second part talks about stratergies of how you can crush it too using social media, all in all a very informative read about social marketing."
+      },
+      {
+        "username": "Pratik",
+        "date": "2017-11-18 19:13:23",
+        "comment": "The best book I have ever read till date!!!"
+      }
+    ],
+    "ratings": [
+      {
+        "username": "Maria John",
+        "date": "2017-04-01 19:13:23",
+        "rating": 5,
+        "comment": "So I've been following Gary V, mostly on YouTube for a couple of months now, and bought this book as a way to understand the best way to approach social media and entrepreneurship as I embark on a journey towards becoming a professional writer."
+      },
+      {
+        "username": "Piyali",
+        "date": "2018-03-12 15:31:23",
+        "rating": 4,
+        "comment": "Nothing good about book."
+      },
+      {
+        "username": "Dhwani",
+        "date": "2017-08-23 10:10:10",
+        "rating": 4,
+        "comment": "I have no doubt saying that gary is a great stroy teller, and this book is an evidence to his claim, its my first gary vee book and I throughly enjoued it, its been distributed in 2 parts, first talks about how some of the people who used crush it method are crushing it, and second part talks about stratergies of how you can crush it too using social media, all in all a very informative read about social marketing."
+      },
+      {
+        "username": "Akash",
+        "date": "2017-11-18 08:59:20",
+        "rating": 4,
+        "comment": "The best book I have ever read till date!!!"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Start With Why: How Great Leaders Inspire Everyone To Take Action",
+    "description": "In 1999, when hardly anyone in India transacted on the Internet, K. Vaitheeswaran co-founded India’s first e-commerce company. Yet, years later, when e-commerce was exploding in India—despite enjoying first-mover advantage—Indiaplaza shut down. What went wrong? Lack of funding? Wrong strategies? Or was it ‘something else’?For the first time ever, Vaitheeswaran reveals that it was indeed something else—a set of inexplicable events that destroyed what could have been a profitable business (an extreme rarity among technology start-ups). He bares his extraordinary trials and tribulations while dealing with business failure and the impossible pressures that can threaten entrepreneurs in India.",
+    "price": 599,
+    "photo": "/assets/u1.png",
+    "categories": ["Digital", "E-Commerce"],
+    "author": "Simon Sinek",
+    "difficultyLevel": "Intermediate",
+    "publishedOn": "2004-02-21 00:00:00",
+    "orderQuantityLimit": "The order quantity for this product is limited to 5 units per customer",
+    "reviews": [
+      {
+        "username": "Shikha",
+        "date": "2018-04-17 13:19:17",
+        "comment": "This book thoroughly explains why you should start with WHY. The author mentions the golden circle of Why How What and the way human minds work."
+      },
+      {
+        "username": "Rahul",
+        "date": "2018-04-24 16:08:47",
+        "comment": "This is a great book for someone who wants to know the ways of the business world especially if they like Apple."
+      },
+      {
+        "username": "Roshni",
+        "date": "2018-05-15 09:14:23",
+        "comment": "Awesome. Good work. Loved the story. Im a big fan of yours."
+      },
+      {
+        "username": "Suresh",
+        "date": "2017-12-19 12:10:43",
+        "comment": "A good book by the famous reader Simon Sinek. The book starts with a comparison of the two main ways to influence human behaviour: manipulation vs inspiration ."
+      },
+      {
+        "username": "Kishore",
+        "date": "2017-05-18 19:31:12",
+        "comment": "Start with Why is a great work of sinek.It offers you some insights how to make a company or a product live long forever."
+      },
+      {
+        "username": "Abhinav",
+        "date": "2018-01-12 12:34:53",
+        "comment": "I read this in almost sitting , not counting breaks for meals and visits to the washroom. So well written, at times heart wrenching. Strangely reflects many thoughts on the business I, as a financial person, have held and are coming true."
+      }
+    ],
+    "ratings": [
+      {
+        "username": "Pavan",
+        "date": "2018-04-30 12:12:12",
+        "rating": 5,
+        "comment": ""
+      },
+      {
+        "username": "Santhosh",
+        "date": "2018-01-29 12:54:34",
+        "rating": 3,
+        "comment": "The book is holistic and complete review of the journey. Still I believe as a founder the author could have focussed on many other areas. Like style of management, Technology, web design development, user Interface. Such things are completely missing from the book. Often author claims world's first, India's first etc... But taking this privilege does not make any company successful is a big takeaway. Other founding members and their opinions are not much discussed. Also, at a times book seems disjointed. There is no flow and direction that can be sensed after initial pages. It can be written in much more detail and better way."
+      },
+      {
+        "username": "Neha",
+        "date": "2018-05-15 17:12:19",
+        "rating": 5,
+        "comment": ""
+      },
+      {
+        "username": "John",
+        "date": "2018-01-16 15:16:17",
+        "rating": 4,
+        "comment": "This book inspires action in every reader with examples of Apple corp,Microsoft, Dell., Southwest airlines.Harley davidson."
+      },
+      {
+        "username": "Ankitha",
+        "date": "2017-08-15 20:15:12",
+        "rating": 1,
+        "comment": "I fail to understand how so many people have given it five stars. Surely doesn't deserve that kind of applaud. I felt the book is very self-obsessed: the author claims Indiaplaza.com and Fabmall / Fabmart (all of which are essentially failures) are pioneers in many things, often the first in the world. Does it matter? And his disgust with the current poster boy of India's e-commerce (read Flipkart) is so much that he always finds an excuse to bash them, giving sermons on why they should not be doing what they are doing."
+      },
+      {
+        "username": "Vijay",
+        "date": "2018-01-12 17:10:10",
+        "rating": 2,
+        "comment": "Not very realistic"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Don't make me think",
+    "description": "Since Don’t Make Me Think was first published in 2000, hundreds of thousands of Web designers and developers have relied on usability guru Steve Krug’s guide to help them understand the principles of intuitive navigation and information design. Witty, commonsensical, and eminently practical, it’s one of the best-loved and most recommended books on the subject.",
+    "price": 349,
+    "photo": "/assets/u2.png",
+    "categories": ["Digital", "Usability"],
+    "author": "Steve Krug",
+    "difficultyLevel": "Expert",
+    "publishedOn": "2014-02-25 00:00:00",
+    "orderQuantityLimit": "The order quantity for this product is limited to 1 units per customer",
+    "reviews": [
+      {
+        "username": "Venky",
+        "date": "2018-04-05 20:21:34",
+        "rating": 5,
+        "comment": "There is a section where Steve gave an example of his Dog and described what few things we should copy from that Dog's behavior for better Usability. I laughed, I enjoyed, I shared with my team - I became his fan. What a great book it is and what an amazing way of telling stories. This is one of the best books I read on User Experience (and believe me, I read most of the related books available till date)."
+      },
+      {
+        "username": "Nikhil",
+        "date": "2018-01-15 21:23:12",
+        "rating": 4,
+        "comment": "Wonderfully written. Interesting to read. Not like most academic books. It's filled with humour and you will not feel like putting the book down."
+      },
+      {
+        "username": "Anonymous",
+        "date": "2018-02-25 15:31:23",
+        "rating": 5,
+        "comment": "this fake reprint is not worth the money . looks like i should have thought before buying this book . >:("
+      },
+      {
+        "username": "Abhishek",
+        "date": "2017-12-15 22:20:30",
+        "rating": 4,
+        "comment": "\"Don't make me think\" very lucidly explains the abstract logic of usability. A lot of what the author tells appears to be common sense, but it's helpful to have all these thoughts consolidated at one place. Also the science of website usability, and self evident design is explained at length. A short and handy book, that will influence the way you look at website and also help you in building a better one."
+      },
+      {
+        "username": "Parth",
+        "date": "2018-08-24 21:21:30",
+        "rating": 5,
+        "comment": "Read the Lean UX before this, but now after reading this i can connect a lot of dots n see wat usable design n testing is all about. Great read."
+      },
+      {
+        "username": "Sankalp",
+        "date": "2017-10-15 15:28:52",
+        "rating": 4,
+        "comment": "Simple, to the point. You should get it if you are starting out in design, product thinking."
+      }
+    ],
+    "ratings": []
+  },
+  {
+    "id": 4,
+    "name": "The Burning Question: We can't burn half world's oil, coal and gas. So how do we quit?",
+    "description": "The Burning Question reveals climate change to be the most fascinating scientific, political and social puzzle in history. It shows that carbon emissions are still accelerating upwards, following an exponential curve that goes back centuries. One reason is that saving energy is like squeezing a balloon: reductions in one place lead to increases elsewhere. Another reason is that clean energy sources don't in themselves slow the rate of fossil fuel extraction.",
+    "price": 477,
+    "photo": "/assets/u3.png",
+    "categories": ["Self-help"],
+    "author": "Duncan Clark",
+    "difficultyLevel": "Expert",
+    "publishedOn": "2013-04-15 00:00:00",
+    "orderQuantityLimit": "The order quantity for this product is limited to 6 units per customer",
+    "reviews": [
+      {
+        "username": "Emma Maxwell",
+        "date": "2015-03-05 12:21:34",
+        "comment": "An easily accessible book that puts it straight and really puts actions into perspective."
+      },
+      {
+        "username": "Supran",
+        "date": "2016-11-05 11:24:32",
+        "comment": "Written in straightforward, everyday language, 'The Burning Question' offers a clear, frank and extremely up-to-date description of the immense challenges we face in mitigating climate change. Its presentation of the scientific and social elements underlying our current inaction is insightful and well-rounded."
+      },
+      {
+        "username": "Jay",
+        "date": "2015-25-12 21:57:32",
+        "comment": "I was very excited to read this book seeing as it is the first time anyone has properly considered the issue of climate change from the perspective of fossil fuel supply (i.e. capping supply rather than trying to constraint demand). I find that this approach really puts things into clear perspective - perhaps best illustrated by the reaction of most people when you explain that to 'solve' climate change we would need to put a cap on all the remaining carbon in the ground, with all fossil fuel supply companies/countries included (most people immediatley say this is impossible!). "
+      }
+    ],
+    "ratings": [
+      {
+        "username": "Raju",
+        "date": "2017-08-15 06:44:17",
+        "rating": 3,
+        "comment": ""
+      },
+      {
+        "username": "Pradeep",
+        "date": "2018-01-26 20:17:51",
+        "rating": 3,
+        "comment": ""
+      },
+      {
+        "username": "Payal",
+        "date": "2016-05-15 23:20:20",
+        "rating": 2,
+        "comment": ""
+      },
+      {
+        "username": "Kirti",
+        "date": "2018-01-12 08:17:32",
+        "rating": 4,
+        "comment": ""
+      },
+      {
+        "username": "Aditi",
+        "date": "2018-06-29 11:24:01",
+        "rating": 5,
+        "comment": ""
+      },
+      {
+        "username": "Divya",
+        "date": "2018-04-30 20:15:00",
+        "rating": 5,
+        "comment": ""
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Entrepreneur Roller Coaster: It's Your Turn to #jointheride",
+    "description": "The entrepreneur roller coaster: why now is the time to #JoinTheRide, will prepare you for the wild ride of entrepreneurship. It will warn you (of forthcoming fears, doubts, and the self-defeating conditioning of your upbringing and past), inoculate you (from the naysayers, dream-stealers, and pains of rejection and failure), and guide you (as you build those under-developed skills of independence, self-motivation, and self-accountability) safely past the landmines that blow up and cause the failure of 66 percent of all new businesses. You will learn the best strategies Darren has ever collected from the most successful people on the planet, covering the four essential skills necessary for entrepreneurial success: Sales, Recruiting, Leadership, and Productivity",
+    "price": 950,
+    "photo": "/assets/u4.png",
+    "categories": ["Digital Experience", "Digital Marketing"],
+    "author": "Darren Hardy",
+    "difficultyLevel": "Beginner",
+    "publishedOn": "2017-03-15 00:00:00",
+    "orderQuantityLimit": "The order quantity for this product is limited to 6 units per customer",
+    "reviews": [
+      {
+        "username": "Mahadev",
+        "date": "2018-04-02 09:15:34",
+        "rating": 5,
+        "comment": "The best book to start your entrepreneurial journey with. The analogy of entrepreneurial journey with rollercoaster ride was simply awesome. I would recommend this to anyone who's planning to start a new journey to follow their dreams. Great read."
+      }
+    ],
+    "ratings": [
+      {
+        "username": "Sharma",
+        "date": "2017-10-14 21:32:56",
+        "rating": 4,
+        "comment": ""
+      },
+      {
+        "username": "Suneel",
+        "date": "2016-01-04 13:32:16",
+        "rating": 5,
+        "comment": ""
+      },
+      {
+        "username": "Rajini",
+        "date": "2018-04-15 06:32:34",
+        "rating": 1,
+        "comment": ""
+      },
+      {
+        "username": "Pavan",
+        "date": "2018-02-13 07:45:32",
+        "rating": 5,
+        "comment": ""
+      },
+      {
+        "username": "Aradhana",
+        "date": "2018-06-29 12:23:43",
+        "rating": 5,
+        "comment": "Well, this is the time for us to become what we truly are. Indeed a great motivational read."
+      },
+      {
+        "username": "Ijya",
+        "date": "2018-05-06 12:15:39",
+        "rating": 3,
+        "comment": ""
+      },
+      {
+        "username": "Rocket Singh",
+        "date": "2018-04-15 13:15:17",
+        "rating": 2,
+        "comment": "Highly recommended for anyone running their own business or looking to soon!"
+      },
+      {
+        "username": "Vinay",
+        "date": "2017-07-25 16:52:26",
+        "rating": 1,
+        "comment": ""
+      },
+      {
+        "username": "Sneha",
+        "date": "2017-10-13 10:55:34",
+        "rating": 4,
+        "comment": ""
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Alibaba The house that Jack Ma Built",
+    "description": "In just a decade and half Jack Ma, a man who rose from humble beginnings and started his career as an English teacher, founded and built Alibaba into the second largest Internet company in the world. The company’s $25 billion IPO in 2014 was the world’s largest, valuing the company more than Facebook or Coca Cola. Alibaba today runs the e-commerce services that hundreds of millions of Chinese consumers depend on every day, providing employment and income for tens of millions more. A Rockefeller of his age, Jack has become an icon for the country’s booming private sector and as the face of the new, consumerist China is courted by heads of state and CEOs from around the world.",
+    "price": 799,
+    "photo": "/assets/u5.png",
+    "categories": ["Digital Marketing"],
+    "author": "Duncan Clark",
+    "difficultyLevel": "Beginner",
+    "publishedOn": "2016-02-25 00:00:00",
+    "orderQuantityLimit": "The order quantity for this product is limited to 2 units per customer",
+    "reviews": [
+      {
+        "username": "Susmitha",
+        "date": "2018-04-24 14:30:23",
+        "comment": "Cool. Good book. nice context."
+      },
+      {
+        "username": "Ratna",
+        "date": "2018-02-24 19:39:03",
+        "comment": "with the curiosity that how could such a big private empire could be build in a country like china with excessive state control, I ordered the book to know what went into the making of the giant. The price paid is totally worth as the author clearly accounts of the historical development of the company and the IT sector. the book is a good read to people of 21st century whose childhood and the development of the sector coincided. As all great stories, this also serves as a great inspiration for entrepreneurs on how to fight the industry giants by getting the basics right and being local."
+      },
+      {
+        "username": "Patel",
+        "date": "2017-01-21 18:03:29",
+        "comment": "The story of Jack ma is Inspiring but the book is not well structured and loses its focus in explaining the development of Chinese E commerce business. The book doesn't focus on Jack ma as much as it should. I personally find the Speeches of Jack more motivating."
+      },
+      {
+        "username": "Patel",
+        "date": "2018-03-06 11:36:47",
+        "comment": "The story of Jack ma is Inspiring but the book is not well structured and loses its focus in explaining the development of Chinese E commerce business. The book doesn't focus on Jack ma as much as it should. I personally find the Speeches of Jack more motivating. The hardcover book is ofcourse great to read. Delivery and Amazon services are as usual Mind-blowing."
+      },
+      {
+        "username": "Busy Bee",
+        "date": "2017-09-26 16:00:23",
+        "comment": "it is a great book. it explains the journey of alibaba in a very unprecedented way. it is quite motivating."
+      }
+    ],
+    "ratings": [
+      {
+        "username": "Bhaskar",
+        "date": "2018-04-24 14:30:23",
+        "rating": 4,
+        "comment": ""
+      },
+      {
+        "username": "Ram",
+        "date": "2018-04-06 19:40:15",
+        "rating": 3,
+        "comment": ""
+      },
+      {
+        "username": "Ram",
+        "date": "2017-12-22 09:20:53",
+        "rating": 5,
+        "comment": "I personally find the Speeches of Jack more motivating."
+      },
+      {
+        "username": "Basha",
+        "date": "2018-03-06 07:43:43",
+        "rating": 3,
+        "comment": ""
+      }
+    ]
+  }
+]

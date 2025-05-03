@@ -1,0 +1,58 @@
+
+ul,
+ol,
+ul li,
+ol li {
+    list-style-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+        .books-container-header {
+            padding: 50px 0 30px;
+            min-height: 115px;
+        }
+
+        .books-container-header h3 {
+            color: #FF5700;
+            font-size: 32px;
+            font-weight: 300;
+        }
+
+        .books-container-header h3 span {
+            float: left;
+        }
+
+        .books-container-header-seprator {
+            padding: 0 10px;
+        }
+
+
+        .sub-header-action-container {
+            float: right;
+            position: relative;
+        }
+
+        .sub-header-action-container a {
+            float: left;
+            margin-left: 10px;
+        }
+        
+
+
+
+    .notifiaton-bar {
+        clear: both;
+    }
+
+    .book-info td {
+        padding-top: 20px;
+    }
+
+
+
+.sub-header-action-container a{
+    position: relative;
+}

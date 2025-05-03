@@ -1,0 +1,10 @@
+{
+    "gpt3.apiKey": "org-LCnlmsrt7yaiGOgymGjLpvSX",
+    "CodeGPT.apiKey": "Azure",
+    "remote.defaultExtensionsIfInstalledLocally": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "GitHub.vscode-pull-request-github",
+        "Enable Auto Completions"
+    ]
+}

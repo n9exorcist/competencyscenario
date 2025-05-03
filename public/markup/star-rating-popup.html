@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../../src/components/App.css">
+    <title>Markup</title>
+
+    <style type="text/css">
+        .mainContainer {
+            /* width: 1280px;
+    margin: 0 auto; */
+            font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        ul,
+        ol,
+        ul li,
+        ol li {
+            list-style-type: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+
+
+        .customer-review-modal .review-block {
+            color: #797979;
+            font-size: 12px;
+            font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+            padding-bottom: 20px;
+        }
+
+        .customer-review-modal .review-block>section {
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        .customer-review-modal .review-block>section .name {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .customer-review-modal .about-reviewer-block {
+            padding-left: 15px;
+        }
+
+        .customer-review-modal .about-reviewer-block span {
+            display: block;
+            clear: both;
+        }
+
+        .customer-review-modal .section-heading {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .customer-review-modal .user {
+            width: 40px;
+            height: 40px;
+        }
+
+        .customer-review-modal .user-description span {
+            display: block;
+            font-weight: bold;
+        }
+
+        .customer-review-modal .modal-footer {
+            justify-content: flex-start;
+            display: block;
+        }
+
+        .top-custoer-reviews {
+            position: relative;
+        }
+
+        .customer-review-modal .modal-footer textarea {
+            width: 100%;
+            font-size: 12px;
+            padding: 7px 15px;
+            color: #797979;
+            height: 80px;
+            margin-bottom: 10px;
+            margin: 0;
+            border: 1px solid #D2D2D2;
+            resize: none;
+        }
+
+        .customer-review-modal .modal-footer .btn-comment {
+            border: 1px solid #FF5700;
+            border-radius: 10px;
+            padding: 10px;
+            float: right;
+            color: #FF5700;
+            text-transform: uppercase;
+        }
+
+        .rating-label {
+            font-size: 10px;
+            margin: 0;
+            padding: 0 0 20px 0;
+            display: inline-block;
+        }
+
+        .star-container {
+            display: inline-block;
+        }
+
+        .see-all-ratings {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 12px;
+            color: #3333FF;
+        }
+
+        .progress-bar-container,
+        .progress-bar-container table {
+            width: 100%;
+        }
+
+        .progress-bar,
+        .progress {
+            width: 400px;
+            border-radius: 1rem;
+            background-color: #FFF;
+            height: 25px;
+        }
+
+        .progress {
+            border: none;
+            background-color: #51EAFF;
+        }
+
+        .rating-n-star-container {
+            display: flex;
+            border-bottom: 1px solid #D2D2D2;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .rating-n-star-container h4 {
+            font-size: 100px;
+            color: #333333;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+        }
+
+        .rating-n-star-container .star-container {
+            width: 30%;
+        }
+
+        .rating-n-star-container .star-container label {
+            font-size: 42px;
+            display: block;
+            text-align: center;
+        }
+
+        .rating-n-star-container .star-container .stars {
+            display: block;
+            text-align: center;
+        }
+
+        .rating-n-star-container .progress-bar-container {
+            width: 70%;
+        }
+
+
+        .customer-review-modal .modal-footer textarea {
+            width: 100%;
+            font-size: 12px;
+            padding: 7px 15px;
+            color: #797979;
+            height: 80px;
+            margin-bottom: 10px;
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        .modal-footer select option {
+            padding: 10px;
+        }
+
+        .modal-footer .star-rating-container {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="mainContainer" id="main-container">
+
+        <div class="customer-review-modal">
+            <div class="modal-header">
+                <h4 class="modal-title">Failing to Succeed: The Story of India's First E-Commerce Company</h4>
+                <button aria-label="Close" class="close" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="rating-n-star-container">
+                    <div class="col-3">
+                        <h4>3.8</h4>
+                        <star-rating>
+                            <div class="star-rating-container">
+                                <div class="stars-highlighter" style="width: 76%;"></div>
+                                <img src="../assets/star-transparent.png">
+                                <img src="../assets/star-transparent.png">
+                                <img src="../assets/star-transparent.png">
+                                <img src="../assets/star-transparent.png">
+                                <img src="../assets/star-transparent.png">
+                            </div>
+                        </star-rating>
+                    </div>
+                    <div class="col-9">
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <progress-bar>
+                                            <div class="progress-bar-container">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="progress-bar">
+                                                                    <div class="progress" style="width: 25%;"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td width="60px">
+                                                                5 Star
+                                                            </td>
+                                                            <td width="60px">
+                                                                25.0%
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </progress-bar>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <progress-bar>
+                                            <div class="progress-bar-container">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="progress-bar">
+                                                                    <div class="progress" style="width: 25%;"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td width="60px">
+                                                                4 Star
+                                                            </td>
+                                                            <td width="60px">
+                                                                25.0%
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </progress-bar>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <progress-bar>
+                                            <div class="progress-bar-container">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="progress-bar">
+                                                                    <div class="progress" style="width: 50%;"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td width="60px">
+                                                                3 Star
+                                                            </td>
+                                                            <td width="60px">
+                                                                50.0%
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </progress-bar>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <progress-bar>
+                                            <div class="progress-bar-container">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="progress-bar">
+                                                                    <div class="progress" style="width: 0%;"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td width="60px">
+                                                                2 Star
+                                                            </td>
+                                                            <td width="60px">
+                                                                0.0%
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </progress-bar>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <progress-bar>
+                                            <div class="progress-bar-container">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="progress-bar">
+                                                                    <div class="progress" style="width: 0%;"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td width="60px">
+                                                                1 Star
+                                                            </td>
+                                                            <td width="60px">
+                                                                0.0%
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </progress-bar>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <section class="top-custoer-reviews" id="top-custoer-reviews">
+                    <h3>4 Ratings</h3>
+                    <section class="review-block" id="review-block">
+                        <section>
+                            <img class="user" src="../assets/user-new.png">
+                            <section class="about-reviewer-block" id="about-reviewer-block">
+                                <span class="name">Ram</span>
+                                <span>Dec 22, 2017</span>
+                            </section>
+                            <section class="customer-rating-container">
+                                <div class="star-rating-container">
+                                    <div class="stars-highlighter" style="width: 100%;"></div>
+                                    <img src="../assets/star-transparent.png">
+                                    <img src="../assets/star-transparent.png">
+                                    <img src="../assets/star-transparent.png">
+                                    <img src="../assets/star-transparent.png">
+                                    <img src="../assets/star-transparent.png">
+                                </div>
+                                <span>5 stars</span>
+                            </section>
+                        </section>
+                    </section>
+                    <section class="review-block" id="review-block">
+                        <section>
+                            <img class="user" src="../assets/user-new.png">
+                            <section class="about-reviewer-block" id="about-reviewer-block">
+                                <span class="name">Bhaskar</span>
+                                <span>Apr 24, 2018</span>
+                            </section>
+                            <section class="customer-rating-container">
+                                <div class="star-rating-container">
+                                    <div class="stars-highlighter" style="width: 80%;"></div>
+                                    <img src="../assets/star-transparent.png">
+                                    <img src="../assets/star-transparent.png">
+                                    <img src="../assets/star-transparent.png">
+                                    <img src="../assets/star-transparent.png">
+                                    <img src="../assets/star-transparent.png">
+                                </div>
+                                <span>4 stars</span>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </div>
+
+            <div class="modal-footer">
+                <h3>Rate this book</h3>
+                <select class="select-rating">
+                    <option>Select Rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <star-rating>
+                    <div class="star-rating-container">
+                        <div class="stars-highlighter" style="width: 0%;"></div>
+                        <img src="../assets/star-transparent.png">
+                        <img src="../assets/star-transparent.png">
+                        <img src="../assets/star-transparent.png">
+                        <img src="../assets/star-transparent.png">
+                        <img src="../assets/star-transparent.png">
+                    </div>
+                </star-rating>
+                <textarea>Leave a comment</textarea>
+                <button class="btn-comment" type="button">
+                    <img src="../assets/star-empty.png"> Submit
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.main container -->
+</body>
+
+</html>

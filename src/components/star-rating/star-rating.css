@@ -1,0 +1,39 @@
+.star-rating-container {
+    height: 19px;
+    width: 90px;
+    position: relative;
+    display: inline-block;
+}
+
+.stars-highlighter {
+    height: 19px;
+    position: absolute;
+    background: #d19501;
+}
+
+.star-rating-container img {
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+
+
+        .customer-review-modal .modal-footer textarea {
+            width: 100%;
+            font-size: 12px;
+            padding: 5px;
+            color: #797979;
+            height: 80px;
+            margin-bottom: 10px;
+            margin: 0;
+            margin-top: 10px;
+            resize: none;
+        }
+
+        .modal-footer select option{
+            padding: 10px;
+        }
+
+        .modal-footer .star-rating-container{
+            float: right;
+        }

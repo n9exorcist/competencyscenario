@@ -1,0 +1,19 @@
+.progress-bar-container,
+.progress-bar-container table {
+    width: 100%;
+    height: 30px;
+    padding-bottom: 10px;
+}
+.progress-bar,
+.progress {
+    width: 400px;
+    border-radius: 1rem;
+    background-color: #FFF;
+     border: 1px solid #797979; 
+    height: 35px;
+}
+
+.progress {
+    border: none;
+    background-color: #51EAFF;
+} 

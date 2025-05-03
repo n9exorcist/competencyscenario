@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../../src/components/App.css">
+    <title>Markup</title>
+
+    <style type="text/css">
+        .mainContainer {
+            /* width: 1280px;
+            margin: 0 auto; */
+            font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        ul,
+        ol,
+        ul li,
+        ol li {
+            list-style-type: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .book-details-container {
+            display: flex;
+        }
+
+        .book-details-container .cover-image {
+            padding: 30px 10px;
+        }
+
+        .book-details-container .cover-image img {
+            width: 200px;
+        }
+
+        .book-details-container .book-details {
+            padding: 30px 10px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .book-details-container .book-details h2 {
+            color: #FF5700;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        .book-details-container .book-details p {
+            font-size: 12px;
+            color: #333333;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+        }
+
+        .book-details-container .book-details p span {
+            color: #3333FF;
+        }
+
+        .book-details-container .rating-n-review {
+            display: flex;
+        }
+
+        .book-details-container .reviews {
+            margin-left: 30px;
+        }
+
+        .cart-block {
+            border: 1px solid #D7D7D7;
+            border-left-width: 0;
+            border-right-width: 0;
+            padding: 10px 0 0;
+            margin: 0 0 0;
+        }
+
+        .cart-block .price {
+            font-size: 22px;
+            color: #00A1B7;
+            font-weight: 700;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+
+        .cart-block .cart-quantity-block {
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .cart-block .cart-quantity-block select {
+            margin-right: 20px;
+        }
+
+        .cart-block label {
+            color: #797979;
+            font-weight: 400;
+            font-size: 14px;
+            padding-right: 5px;
+        }
+
+        .cart-block input {
+            border: 1px solid #D2D2D2;
+            padding: 3px 10px;
+            font-size: 12px;
+            color: #D2D2D2;
+        }
+
+        .button {
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 20px;
+            color: #FF5700;
+            border: 1px solid #FF5700;
+        }
+
+        .button:hover {
+            color: #FF5700;
+            text-decoration: none;
+            border: 1px solid #FF5700;
+        }
+
+        .button.add-to-cart {
+            background: url(../assets/cart-orange.png) 10px center no-repeat;
+            margin-right: 10px;
+            padding-left: 40px;
+            padding-right: 20px;
+        }
+
+        .button.add-to-favorites {
+            background: url(../assets/favorites-orange.png) 10px center no-repeat;
+            padding-left: 40px;
+            padding-right: 20px;
+        }
+
+        .book-description-container {
+            font-size: 12px;
+            padding-top: 10px;
+        }
+
+        .book-description-container P {
+            font-style: italic;
+            color: #797979;
+        }
+
+        .book-description-container p.book-description {
+            margin: 0;
+            padding: 0;
+            font-style: normal;
+            color: #797979;
+        }
+
+        .top-custoer-reviews {
+            padding: 20px 10px;
+            border-top: 1px solid #D7D7D7;
+        }
+
+        .top-custoer-reviews h3 {
+            font-size: 20px;
+            font-weight: 200;
+            padding-bottom: 20px;
+        }
+
+        .top-custoer-reviews .review-block {
+            color: #797979;
+            font-size: 12px;
+        }
+
+        .top-custoer-reviews .review-block>section {
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        .top-custoer-reviews .review-block>section .name {
+            font-size: 14px;
+        }
+
+        .top-custoer-reviews .about-reviewer-block {
+            padding-left: 15px;
+        }
+
+        .top-custoer-reviews .about-reviewer-block span {
+            display: block;
+        }
+
+        .top-custoer-reviews .user {
+            width: 40px;
+            height: 40px;
+        }
+
+        .top-custoer-reviews .user-description span {
+            display: block;
+            font-weight: bold;
+        }
+
+        .free-delivery {
+            color: #FF0000;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 0 10px;
+        }
+
+        .popup-button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="mainContainer" id="main-container">
+
+        <div class="container">
+            <section class="book-details-container">
+                <a class="cover-image" href="#">
+                    <img src="../assets/u0.png">
+                </a>
+                <section class="book-details">
+                    <h2>Alibaba The house that Jack Ma Built</h2>
+                    <p>
+                        by
+                        <span>Duncan Clark</span> (Author)
+                    </p>
+                    <section class="rating-n-review">
+                        <section class="ratings">
+                            <div class="star-rating-container">
+                                <div class="stars-highlighter" style="width: 76%;"></div>
+                                <img src="../assets/star-transparent.png">
+                                <img src="../assets/star-transparent.png">
+                                <img src="../assets/star-transparent.png">
+                                <img src="../assets/star-transparent.png">
+                                <img src="../assets/star-transparent.png">
+                            </div>
+                            <label>
+                                <span>3.8</span>
+                                <span>/</span>
+                                <span>5</span>
+                                ratings
+                            </label>
+                        </section>
+                        <section class="reviews">
+                            <img src="../assets/Comments.png">
+                            <a href="#">
+                                <span>5</span>
+                                <span>customer reviews</span>
+                            </a>
+                        </section>
+                    </section>
+                    <section class="cart-block">
+                        <section class="price">
+                            ₹ 799
+                        </section>
+                        <span class="free-delivery">FREE Delivery</span>
+                        <section class="cart-quantity-block">
+                            <span class="book-quantity">Qty</span>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                            <label for="pincode">Check Delivery</label>
+                            <input class="pincode" type="text" value="Pincode">
+                        </section>
+                    </section>
+                    <section class="book-description-container">
+                        <p>The order quantity for this product is limited to 2 units per customer</p>
+                        <p class="book-description">In just a decade and half Jack Ma, a man who rose from humble beginnings and started his career as
+                            a...
+                            <a href="javascript:void(0)">Read More</a>
+                        </p>
+                    </section>
+                    <div class="popup-button-container">
+                        <section>
+                            <a class="button add-to-cart" href="#">Add to Cart</a>
+                            <a class="button add-to-favorites" href="#">Add to favorites</a>
+                        </section>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.result-text-container {
+    clear: both;
+    position: relative;
+    margin-bottom: -25px;
+}
+.result-text-container p{
+    margin: 0;
+    padding: 10px 0;
+}

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../../src/components/App.css">
+    <title>Markup</title>
+
+    <style type="text/css">
+        .mainContainer {
+            /* width: 1280px;
+    margin: 0 auto; */
+            font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        ul,
+        ol,
+        ul li,
+        ol li {
+            list-style-type: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+
+
+        .customer-review-modal .review-block {
+            color: #797979;
+            font-size: 12px;
+            font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .customer-review-modal .review-block>section {
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        .customer-review-modal .review-block>section .name {
+            font-size: 14px;
+        }
+
+        .customer-review-modal .about-reviewer-block {
+            padding-left: 15px;
+        }
+
+        .customer-review-modal .about-reviewer-block span {
+            display: block;
+            clear: both;
+        }
+
+        .customer-review-modal .section-heading {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .customer-review-modal .user {
+            width: 40px;
+            height: 40px;
+        }
+
+        .customer-review-modal .user-description span {
+            display: block;
+            font-weight: bold;
+        }
+
+        .customer-review-modal .modal-footer {
+            justify-content: flex-start;
+            display: block;
+        }
+
+        .customer-review-modal .modal-footer textarea {
+            width: 100%;
+            font-size: 12px;
+            padding: 7px 15px;
+            color: #797979;
+            height: 80px;
+            margin-bottom: 10px;
+            border: 1px solid #D2D2D2;
+            resize: none;
+        }
+
+        .customer-review-modal .modal-footer .btn-comment {
+            border: 1px solid #FF5700;
+            border-radius: 10px;
+            padding: 10px;
+            float: right;
+            color: #FF5700;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="mainContainer" id="main-container">
+
+        <div class="customer-review-modal">
+            <div class="modal-header">
+                <h4 class="modal-title">Alibaba The house that Jack Ma Built</h4>
+                <button aria-label="Close" class="close" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <section class="top-custoer-reviews">
+                    <h3 class="section-heading">5 Customer Reviews</h3>
+                    <section class="review-block">
+                        <section>
+                            <img class="user" src="../assets/user-new.png">
+                            <section class="about-reviewer-block">
+                                <span class="name">Susmitha</span>
+                                <span>24-Apr-2018</span>
+                            </section>
+                        </section>
+                        <p class="user-description">Cool. Good book. nice context.
+                        </p>
+                    </section>
+                    <section class="review-block">
+                        <section>
+                            <img class="user" src="../assets/user-new.png">
+                            <section class="about-reviewer-block">
+                                <span class="name">Patel</span>
+                                <span>6-Mar-2018</span>
+                            </section>
+                        </section>
+                        <p class="user-description">
+                            The story of Jack ma is Inspiring but the book is not well structured and loses its focus in explain...
+                            <a href="javascript:void(0);">Read More</a>
+                        </p>
+                    </section>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <h3 class="section-heading">Review this book</h3>
+                <textarea>Leave a comment</textarea>
+                <button class="btn-comment" type="button">
+                    <img src="../assets/Comments-orange.png"> Comment
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.main container -->
+</body>
+
+</html>
