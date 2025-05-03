@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState} from "react";
 import './book-info-record.css';
 import StarRating from "../star-rating/star-rating";
 import moment from 'moment';
-// import NotificationModal from "../notification-modal/notification-modal";
+import NotificationModal from "../notification-modal/notification-modal";
 
 const BookInfoRecord = ({ book }) => {
-    // const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const handleShowModal = () => setShowModal(true);
+    const handleCloseModal = () => setShowModal(false);
+
+
+    console.log("book in book info record", book);
     return (
         <>
             <div className="each-row book-info" id={book.id} key={book.id}>
@@ -27,7 +32,7 @@ const BookInfoRecord = ({ book }) => {
                         </p>
                      
 
-                        <div className="row review-rating">
+                        <div className="row review-rating" onClick={handleShowModal}>
                             <div className="col-sm-6">
                                 <StarRating rating="3.5"></StarRating>
                                 <span>&nbsp; 3.5&nbsp;/&nbsp; 10&nbsp;ratings</span>
@@ -63,6 +68,7 @@ const BookInfoRecord = ({ book }) => {
                     <div className="published-on-td">{moment(book.publishedOn).format("DD MMM YYYY")}</div>
                 </div>
             </div>
+            <NotificationModal show={showModal} onClose={handleCloseModal} book={book} />
 
         </>
     )
