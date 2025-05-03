@@ -6,7 +6,6 @@ import moment from 'moment';
 
 const BookInfoRecord = ({ book }) => {
     // const [showModal, setShowModal] = useState(false);
-    console.log("book in book info record", book);
     return (
         <>
             <div className="each-row book-info" id={book.id} key={book.id}>
