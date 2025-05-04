@@ -1,13 +1,9 @@
-import { ADD_RATING } from "../actions/ratingsActions";
-// 4. Reducer:
-export default function ratingsReducer(state = {}, action) {
+import * as types from "../actions/actionTypes";
+
+export default function ratingsReducer(state = [], action) {
   switch (action.type) {
-    case ADD_RATING:
-      const { bookId, rating } = action.payload;
-      return {
-        ...state,
-        [bookId]: [...(state[bookId] || []), rating],
-      };
+    case types.ADD_RATING:
+      return action.payload; // Updated books array with new ratings
     default:
       return state;
   }

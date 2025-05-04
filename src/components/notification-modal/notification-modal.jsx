@@ -1,25 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Modal from "react-bootstrap/Modal";
-import "./notification-modal.css";
 import ProgressBar from "../progress-bar/progress-bar";
 import StarRating from "../star-rating/star-rating";
-
-// To implement the required features for the BooksMark portal, here’s a step-by-step breakdown of how to achieve the objectives and key requirements:
-
-// 1. Update notification-modal.jsx for the Ratings Popup
-// The notification-modal.jsx file will serve as the base for the book ratings popup. Modify it to include the following features:
-
-// Display the average star rating.
-// Show percentage star ratings using progress bars.
-// Display the top 2 customer ratings.
-// Allow users to submit a new rating.
-// Here’s an updated version of notification-modal.jsx:
+import { addRatings } from "../../redux/actions/booksActions";
 
 const NotificationModal = ({ show, onClose, book }) => {
-  const [averageRating, setAverageRating] = React.useState(0);
-  const [percentageRatings, setPercentageRatings] = React.useState([]);
-  const [topRatings, setTopRatings] = React.useState([]);
-  const [newRating, setNewRating] = React.useState({ stars: 0, comment: "" });
+  const [averageRating, setAverageRating] = useState(0);
+  const [percentageRatings, setPercentageRatings] = useState([]);
+  const [topRatings, setTopRatings] = useState([]);
+  const [newRating, setNewRating] = useState({ stars: 0, comment: "" });
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (book && book.ratings) {
       calculateRatings(book.ratings);
@@ -48,25 +40,8 @@ const NotificationModal = ({ show, onClose, book }) => {
     );
   };
 
-  const handleRatingChange = (e) => {
-    setNewRating({ ...newRating, stars: parseInt(e.target.value, 10) });
-  };
-
-  const handleCommentChange = (e) => {
-    setNewRating({ ...newRating, comment: e.target.value });
-  };
-
   const handleSubmit = () => {
-    const updatedRatings = [
-      ...book.ratings,
-      {
-        username: "Anonymous",
-        date: new Date().toISOString(),
-        rating: newRating.stars,
-        comment: newRating.comment,
-      },
-    ];
-    calculateRatings(updatedRatings);
+    dispatch(addRatings(book.id, newRating.stars, newRating.comment));
     setNewRating({ stars: 0, comment: "" });
     onClose();
   };
@@ -104,7 +79,12 @@ const NotificationModal = ({ show, onClose, book }) => {
           <h5>Rate this Book</h5>
           <select
             value={newRating.stars}
-            onChange={handleRatingChange}
+            onChange={(e) =>
+              setNewRating({
+                ...newRating,
+                stars: parseInt(e.target.value, 10),
+              })
+            }
             className="select-rating"
           >
             <option value="0">Select Rating</option>
@@ -116,7 +96,9 @@ const NotificationModal = ({ show, onClose, book }) => {
           </select>
           <textarea
             value={newRating.comment}
-            onChange={handleCommentChange}
+            onChange={(e) =>
+              setNewRating({ ...newRating, comment: e.target.value })
+            }
             placeholder="Leave a comment"
           />
           <button onClick={handleSubmit} className="btn-submit">
