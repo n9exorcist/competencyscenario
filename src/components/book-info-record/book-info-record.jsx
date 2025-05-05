@@ -36,13 +36,16 @@ const BookInfoRecord = ({ book, updateBookRating }) => {
               {book.description.substr(0, 100) + "..."}
             </p>
 
-            <div className="row review-rating">
+            <div
+              className="row review-rating"
+              onClick={() => setShowModal(true)}
+            >
               <div className="col-sm-6">
                 <StarRating rating="3.5"></StarRating>
                 <span>&nbsp; 3.5&nbsp;/&nbsp; 10&nbsp;ratings</span>
               </div>
               <div className="col-sm-6">
-                <a href="# " onClick={() => setShowModal(true)}>
+                <a href="# ">
                   <img src="./assets/Comments.png" alt="comments" />
                   &nbsp; {book.reviews?.length || 0} customer reviews
                 </a>

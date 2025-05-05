@@ -1,7 +1,6 @@
 export const LOAD_BOOKS_SUCCESS = "LOAD_BOOKS_SUCCESS";
 export const BEGIN_API_CALL = "BEGIN_API_CALL";
 export const API_CALL_ERROR = "API_CALL_ERROR";
-export const ADD_RATING = "ADD_RATING";
 export const UPDATE_BOOK_RATING = "UPDATE_BOOK_RATING";
 
 // 3. Add Redux Integration

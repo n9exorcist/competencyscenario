@@ -150,7 +150,18 @@ const NotificationModal = ({ show, onHide, book, onSubmitRating }) => {
             onClick={handleSubmit}
             disabled={loading}
           >
-            {loading ? "Submitting..." : "Submit Rating"}
+            {loading ? (
+              <>
+                <span
+                  className="spinner-border spinner-border-sm mr-2"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Submitting...
+              </>
+            ) : (
+              "Submit Rating"
+            )}
           </button>
         </div>
       </Modal.Body>

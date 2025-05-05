@@ -10,10 +10,3 @@ export function apiCallError() {
 
 // 3. Add Redux Integration
 // To manage ratings dynamically, update the Redux store with actions and reducers for handling ratings.
-
-// Action:
-
-// export const addRating = (bookId, rating) => ({
-//   type: types.ADD_RATING,
-//   payload: { bookId, rating },
-// });
