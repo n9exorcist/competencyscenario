@@ -9,10 +9,7 @@ import Spinner from "../spinner/Spinner";
 
 class BooksPage extends React.Component {
   componentDidMount() {
-    console.log("this.props", this.props);
     const { books, actions } = this.props;
-    console.log("books", books);
-    console.log("actions", actions);
 
     if (books.length === 0) {
       actions.loadBooks().catch((error) => {

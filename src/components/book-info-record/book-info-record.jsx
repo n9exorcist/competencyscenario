@@ -10,8 +10,6 @@ const BookInfoRecord = ({ book }) => {
   const [showModal, setShowModal] = useState(false);
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
-
-  console.log("book in book info record", book);
   return (
     <>
       <div className="each-row book-info" id={book.id} key={book.id}>
