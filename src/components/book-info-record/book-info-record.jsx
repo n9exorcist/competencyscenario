@@ -3,13 +3,18 @@ import "./book-info-record.css";
 import StarRating from "../star-rating/star-rating";
 import moment from "moment";
 import NotificationModal from "../notification-modal/notification-modal";
+import { connect } from "react-redux";
+import * as BooksActions from "../../redux/actions/booksActions";
 
 // 2. Integrate the Popup in book-info-record.jsx
 // Update the BookInfoRecord component to trigger the popup when the star rating or "ratings" link is clicked.
-const BookInfoRecord = ({ book }) => {
+const BookInfoRecord = ({ book, updateBookRating }) => {
   const [showModal, setShowModal] = useState(false);
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
+
+  const handleNewRating = (bookId, newRating) => {
+    updateBookRating(bookId, newRating);
+  };
+
   return (
     <>
       <div className="each-row book-info" id={book.id} key={book.id}>
@@ -31,22 +36,25 @@ const BookInfoRecord = ({ book }) => {
               {book.description.substr(0, 100) + "..."}
             </p>
 
-            <div className="row review-rating" onClick={handleShowModal}>
+            <div className="row review-rating">
               <div className="col-sm-6">
                 <StarRating rating="3.5"></StarRating>
                 <span>&nbsp; 3.5&nbsp;/&nbsp; 10&nbsp;ratings</span>
               </div>
               <div className="col-sm-6">
-                <img src="./assets/Comments.png" alt="comments" />
-                &nbsp; {book.reviews.length}&nbsp; customer reviews
+                <a href="# " onClick={() => setShowModal(true)}>
+                  <img src="./assets/Comments.png" alt="comments" />
+                  &nbsp; {book.reviews?.length || 0} customer reviews
+                </a>
               </div>
             </div>
 
             {/* Enhanced Modal */}
             <NotificationModal
               show={showModal}
-              onClose={handleCloseModal}
+              onHide={() => setShowModal(false)}
               book={book}
+              onSubmitRating={handleNewRating}
             />
             <div className="price">&#8377;&nbsp;{book.price}</div>
             <div className="cart-div">
@@ -92,13 +100,13 @@ const BookInfoRecord = ({ book }) => {
           </div>
         </div>
       </div>
-      <NotificationModal
-        show={showModal}
-        onClose={handleCloseModal}
-        book={book}
-      />
     </>
   );
 };
 
-export default BookInfoRecord;
+const mapDispatchToProps = (dispatch) => ({
+  updateBookRating: (bookId, newRating) =>
+    dispatch(BooksActions.updateBookRating(bookId, newRating)),
+});
+
+export default connect(null, mapDispatchToProps)(BookInfoRecord);

@@ -6,6 +6,10 @@ export function loadBooksSuccess(books) {
   return { type: types.LOAD_BOOKS_SUCCESS, books };
 }
 
+export function updateBookRating(bookId, newRating) {
+  return { type: types.UPDATE_BOOK_RATING, bookId, newRating };
+}
+
 export function loadBooks() {
   return function (dispatch) {
     dispatch(beginApiCall());
@@ -31,6 +35,7 @@ export function addRatings(bookId, rating, comment) {
           const updatedRatings = [
             ...book.ratings,
             {
+              id: Date.now(),
               username: "Anonymous",
               date: new Date().toISOString(),
               rating,

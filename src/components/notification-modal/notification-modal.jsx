@@ -1,108 +1,156 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+// notification-modal.jsx
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import ProgressBar from "../progress-bar/progress-bar";
 import StarRating from "../star-rating/star-rating";
-import { addRatings } from "../../redux/actions/booksActions";
+import "./notification-modal.css";
+import { useMemo } from "react";
 
-const NotificationModal = ({ show, onClose, book }) => {
-  const [averageRating, setAverageRating] = useState(0);
-  const [percentageRatings, setPercentageRatings] = useState([]);
-  const [topRatings, setTopRatings] = useState([]);
-  const [newRating, setNewRating] = useState({ stars: 0, comment: "" });
-  const dispatch = useDispatch();
+const NotificationModal = ({ show, onHide, book, onSubmitRating }) => {
+  const [ratingValue, setRatingValue] = useState(0);
+  const [comment, setComment] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (book && book.ratings) {
-      calculateRatings(book.ratings);
-    }
-  }, [book]);
-
-  const calculateRatings = (ratings) => {
-    const totalRatings = ratings.length;
-    const ratingCounts = [0, 0, 0, 0, 0];
-
-    ratings.forEach((rating) => {
-      ratingCounts[rating.rating - 1]++;
-    });
-
-    const avgRating =
-      ratings.reduce((sum, rating) => sum + rating.rating, 0) / totalRatings;
-
-    const percentages = ratingCounts.map(
-      (count) => (count / totalRatings) * 100
-    );
-
-    setAverageRating(avgRating.toFixed(1));
-    setPercentageRatings(percentages);
-    setTopRatings(
-      ratings.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 2)
-    );
+  const handleStarClick = (value) => {
+    setRatingValue(value);
   };
 
   const handleSubmit = () => {
-    dispatch(addRatings(book.id, newRating.stars, newRating.comment));
-    setNewRating({ stars: 0, comment: "" });
-    onClose();
+    if (!ratingValue) return alert("Please select a rating.");
+    setLoading(true);
+
+    // Simulate delay
+    setTimeout(() => {
+      const newReview = {
+        id: Date.now(), // unique ID
+        user: "Anonymous",
+        date: new Date().toISOString(),
+        rating: ratingValue,
+        comment,
+      };
+      onSubmitRating(book.id, newReview); // Notify parent component
+      setLoading(false);
+      setRatingValue(0);
+      setComment("");
+      onHide(); // Close modal
+    }, 1000);
   };
 
+  // Calculate average rating and distribution
+  const calculateRatingsStats = (reviews) => {
+    const total = reviews.length;
+    const counts = [0, 0, 0, 0, 0]; // index 0 is 1-star, index 4 is 5-star
+    let sum = 0;
+
+    reviews.forEach((r) => {
+      const idx = r.rating - 1;
+      if (idx >= 0 && idx < 5) {
+        counts[idx]++;
+        sum += r.rating;
+      }
+    });
+
+    const average = total ? (sum / total).toFixed(1) : 0;
+    const distribution = counts.map((count) => ({
+      stars: counts.indexOf(count) + 1,
+      percent: total ? ((count / total) * 100).toFixed(1) : 0,
+    }));
+
+    const recentReviews = [...reviews]
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 2);
+
+    return { average, distribution, recentReviews };
+  };
+
+  const { average, distribution, recentReviews } = useMemo(() => {
+    return calculateRatingsStats(book.reviews || []);
+  }, [book.reviews]);
+
   return (
-    <Modal show={show} onHide={onClose} backdrop="static" size="xl" centered>
+    <Modal show={show} onHide={onHide} size="xl" centered backdrop="static">
       <Modal.Header closeButton>
-        <Modal.Title>{book.name}</Modal.Title>
+        <Modal.Title>{book?.name}</Modal.Title>
       </Modal.Header>
+
       <Modal.Body>
-        <div className="rating-summary">
-          <h4>Average Rating: {averageRating}</h4>
-          <StarRating rating={averageRating} />
-          <div className="percentage-ratings">
-            {percentageRatings.map((percent, index) => (
+        {/* Rating Summary */}
+        <div className="rating-n-star-container row mb-4">
+          <div className="col-3 text-center">
+            <h4>{average}</h4>
+            <StarRating rating={average} />
+            <p>{book.reviews?.length || 0} ratings</p>
+          </div>
+          <div className="col-9">
+            {distribution.map((item, index) => (
               <ProgressBar
-                key={index}
-                percentage={percent}
-                label={`${5 - index} Stars`}
+                key={index} // Using `index` as the key is not ideal
+                percentage={item.percent}
+                label={`${item.stars} Star`}
               />
             ))}
           </div>
         </div>
-        <div className="top-ratings">
-          <h5>Top Customer Ratings</h5>
-          {topRatings.map((rating, index) => (
-            <div key={index} className="rating-record">
-              <StarRating rating={rating.rating} />
-              <p>{rating.comment}</p>
-              <small>{new Date(rating.date).toLocaleString()}</small>
-            </div>
-          ))}
-        </div>
-        <div className="new-rating">
-          <h5>Rate this Book</h5>
+
+        {/* Recent Reviews */}
+        <section className="top-custoer-reviews mb-4">
+          <h5>Top Customer Reviews</h5>
+          {recentReviews.length > 0 ? (
+            recentReviews.map((review, index) => (
+              <div
+                key={`${review.id || index}-${review.date}`}
+                className="review-block mb-3"
+              >
+                <img
+                  className="user mr-3 w-25"
+                  src="/assets/user-new.png"
+                  alt="user"
+                />
+                <div className="about-reviewer-block d-inline-block">
+                  <strong>{review.user}</strong>
+                  <small> • {new Date(review.date).toLocaleDateString()}</small>
+                </div>
+                <div className="customer-rating-container mt-2">
+                  <StarRating rating={review.rating} />
+                  <span>{review.rating} stars</span>
+                </div>
+                <p className="mt-1">{review.comment}</p>
+              </div>
+            ))
+          ) : (
+            <p>No reviews yet.</p>
+          )}
+        </section>
+
+        {/* Submit Rating Section */}
+        <div className="submit-rating mt-4">
+          <h5>Rate this book</h5>
           <select
-            value={newRating.stars}
-            onChange={(e) =>
-              setNewRating({
-                ...newRating,
-                stars: parseInt(e.target.value, 10),
-              })
-            }
-            className="select-rating"
+            className="form-control w-25 mb-2"
+            value={ratingValue}
+            onChange={(e) => handleStarClick(Number(e.target.value))}
           >
             <option value="0">Select Rating</option>
-            {[1, 2, 3, 4, 5].map((star) => (
-              <option key={star} value={star}>
-                {star}
+            {[1, 2, 3, 4, 5].map((val) => (
+              <option key={val} value={val}>
+                {val} stars
               </option>
             ))}
           </select>
+          <StarRating rating={ratingValue} />
           <textarea
-            value={newRating.comment}
-            onChange={(e) =>
-              setNewRating({ ...newRating, comment: e.target.value })
-            }
+            className="form-control mt-2"
+            rows="3"
             placeholder="Leave a comment"
-          />
-          <button onClick={handleSubmit} className="btn-submit">
-            Submit
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+          ></textarea>
+          <button
+            className="btn btn-primary mt-2"
+            onClick={handleSubmit}
+            disabled={loading}
+          >
+            {loading ? "Submitting..." : "Submit Rating"}
           </button>
         </div>
       </Modal.Body>
