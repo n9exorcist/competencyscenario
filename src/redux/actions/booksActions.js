@@ -1,6 +1,6 @@
 import * as types from "./actionTypes";
 import * as booksApi from "../../api/booksApi";
-import { beginApiCall, apiCallError, addRating } from "./apiStatusActions";
+import { beginApiCall, apiCallError } from "./apiStatusActions";
 
 export function loadBooksSuccess(books) {
   return { type: types.LOAD_BOOKS_SUCCESS, books };

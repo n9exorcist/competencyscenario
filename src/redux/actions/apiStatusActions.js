@@ -13,7 +13,7 @@ export function apiCallError() {
 
 // Action:
 
-export const addRating = (bookId, rating) => ({
-  type: types.ADD_RATING,
-  payload: { bookId, rating },
-});
+// export const addRating = (bookId, rating) => ({
+//   type: types.ADD_RATING,
+//   payload: { bookId, rating },
+// });
