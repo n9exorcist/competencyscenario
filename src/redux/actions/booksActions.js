@@ -11,16 +11,14 @@ export function updateBookRating(bookId, newRating) {
 }
 
 export function loadBooks() {
-  return function (dispatch) {
+  return async (dispatch) => {
     dispatch(beginApiCall());
-    return booksApi
-      .getBooks()
-      .then((books) => {
-        dispatch(loadBooksSuccess(books));
-      })
-      .catch((error) => {
-        dispatch(apiCallError(error));
-        throw error;
-      });
+    try {
+      const books = await booksApi.getBooks();
+      dispatch(loadBooksSuccess(books));
+    } catch (error) {
+      dispatch(apiCallError(error));
+      throw error;
+    }
   };
 }

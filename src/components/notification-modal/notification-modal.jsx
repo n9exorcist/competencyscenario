@@ -38,21 +38,29 @@ const NotificationModal = ({ show, onHide, book, onSubmitRating }) => {
 
   // Calculate average rating and distribution
   const calculateRatingsStats = (reviews) => {
+    console.log("reviews", reviews);
     const total = reviews.length;
-    const counts = [0, 0, 0, 0, 0]; // index 0 is 1-star, index 4 is 5-star
+    // const counts = [0, 0, 0, 0, 0]; // index 0 is 1-star, index 4 is 5-star
+    const counts = Array(5).fill(0);
     let sum = 0;
 
-    reviews.forEach((r) => {
-      const idx = r.rating - 1;
-      if (idx >= 0 && idx < 5) {
-        counts[idx]++;
-        sum += r.rating;
+    for (const { rating } of reviews) {
+      if (rating >= 1 && rating <= 5) {
+        counts[rating - 1]++;
+        // This line updates the count of how many times each star rating (1 to 5) appears.
+        sum += rating;
       }
-    });
+    }
+
+    // Shortcut of above code
+    // for (const review of reviews) {
+    //   const rating = review.rating;
+    // }
 
     const average = total ? (sum / total).toFixed(1) : 0;
-    const distribution = counts.map((count) => ({
-      stars: counts.indexOf(count) + 1,
+
+    const distribution = counts.map((count, index) => ({
+      stars: index + 1,
       percent: total ? ((count / total) * 100).toFixed(1) : 0,
     }));
 

@@ -9,6 +9,7 @@ export default function booksReducer(state = initialState.books, action) {
       return state.map((book) => {
         if (book.id === action.bookId) {
           const updatedReviews = [...book.reviews, action.newRating];
+          console.log("Updated Reviews:", updatedReviews);
           const total = updatedReviews.length;
           const sum = updatedReviews.reduce((acc, r) => acc + r.rating, 0);
           const averageRating = (sum / total).toFixed(1);

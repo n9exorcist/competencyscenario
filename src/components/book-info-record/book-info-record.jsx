@@ -5,10 +5,13 @@ import moment from "moment";
 import NotificationModal from "../notification-modal/notification-modal";
 import { connect } from "react-redux";
 import * as BooksActions from "../../redux/actions/booksActions";
+import { bindActionCreators } from "redux";
 
 // 2. Integrate the Popup in book-info-record.jsx
 // Update the BookInfoRecord component to trigger the popup when the star rating or "ratings" link is clicked.
 const BookInfoRecord = ({ book, updateBookRating }) => {
+  console.log("BookInfoRecord:", book);
+  console.log("updateBookRating:", updateBookRating);
   const [showModal, setShowModal] = useState(false);
 
   const handleNewRating = (bookId, newRating) => {
@@ -112,4 +115,12 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(BooksActions.updateBookRating(bookId, newRating)),
 });
 
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators(
+//     {
+//       updateBookRating: BooksActions.updateBookRating,
+//     },
+//     dispatch
+//   );
+// }
 export default connect(null, mapDispatchToProps)(BookInfoRecord);
